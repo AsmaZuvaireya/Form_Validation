@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="countries.js"></script>
+</head>
+
+<body onload="location()">
+    <form name="display_inline" onsubmit="return false">
+        <h1>Form Validation</h1>
+        <p id="nam">
+            <p>Name:
+                <input type="text" id="names" onkeypress="return name_check(event)" onChange="nam()" />
+            </p>
+            <p id="mail">
+                <p>
+                    EmailId:
+                    <input type="text" id="emailid" onChange="email_check();">
+                </p>
+            </p>
+            <p>
+                DOB:
+                <input type="date" id="dob" min="1990-01-01" max="2016-12-31;">
+            </p>
+            <p id="ag"></p>
+            <p>
+                Age:
+                <input type="text" id="age" maxlength="2" onkeypress="return age_check(event)" onchange="agesss()">
+            </p>
+            <p>
+                Language Known:
+                <p id="lng1">
+                    <input type="checkbox" name="chkbx" id="ch1" onclick="return getcheckedvalue(event)" value="English">English</p>
+                <p id="lng2">
+                    <input type="checkbox" name="chkbx" id="ch2" onclick="return getcheckedvalue(event)" value="Tamil">Tamil</p>
+                <p id="lng3">
+                    <input type="checkbox" name="chkbx" id="ch3" onclick="return getcheckedvalue(event)" value="Hindi">Hindi</p>
+            </p>
+            <p>
+                Select Country:
+                <select id="country" name="country" ;></select>
+            </p>
+            <p>
+                Select State:
+                <select id="state" name="state" ;></select>
+            </p>
+            <p>
+                Mobile Number:
+                <input type="text" id="mobilenum" maxlength="10" onkeypress="return mob_num(event);">
+            </p>
+            <button type="button" onclick="showInput()">submit</button>
+            <button>clear</button>
+    </form>
+    <table class="tbl" id="table1" style="display:none;">
+        <thead>
+            <tr>
+                <th>Name
+                    <p id="name_display"></p>
+                </th>
+                <th>Emailid
+                    <p id="emailid_display"></p>
+                </th>
+                <th>DOB
+                    <p id="dob_display"></p>
+                </th>
+                <th>Age
+                    <p id="age_display"></p>
+                </th>
+                <th>Language Known
+                    <p id="lng1_display"></p>
+                </th>
+                <th>Country
+                    <p id="country_display"></p>
+                </th>
+                <th>State
+                    <p id="state_display"></p>
+                </th>
+                <th>Contact Number
+                    <p id="mobilenum_display"></p>
+                </th>
+            </tr>
+        </thead>
+    </table>
+</body>
+
+</html>
